@@ -1,3 +1,4 @@
+
 <?php
 require_once 'controlador/controlador.php';
 
@@ -19,14 +20,15 @@ switch ($params[0]) {
         break;
         case 'detalle':
             $controller = new TaskController();
-            $controller->Showdetalles($params[1]);
+            $controller->showDetalles($params[1]);
             break;
             case 'buscar':
-               
+
                 $controller = new TaskController();
                 $controller->Buscarcatalogos($atributo,$valor); 
 
                 break;
+
     default: 
         echo "404 Page Not Found"; 
         break;
