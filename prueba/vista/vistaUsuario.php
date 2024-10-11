@@ -56,6 +56,25 @@ public function showAutosAgregados()
         require __DIR__ . '/../templates/tablaEliminar.phtml';
         require __DIR__ . '/../templates/footer.phtml';
     }
+    public function showErrorAgregados()
+    {
+        require __DIR__ . '/../templates/encabezado.phtml';
+        echo '<h1 style="text-align: center; color: red;">Error. Por favor, verifica los datos ingresados.</h1>';
+        require __DIR__ . '/../templates/tablaAgregar.phtml';
+        require __DIR__ . '/../templates/footer.phtml';
+    }
+    public function showErrorEditar() {
+        require __DIR__ . '/../templates/encabezado.phtml'; 
+        echo '<h1 style="text-align: center; color: red;">Error al editar el auto. Por favor, verifica los datos ingresados.</h1>';
+        require __DIR__ . '/../templates/tablaEditar.phtml'; 
+        require __DIR__ . '/../templates/footer.phtml'; 
+    }
+    public function showErrorEliminar() {
+        require __DIR__ . '/../templates/encabezado.phtml'; 
+        echo '<h1 style="text-align: center; color: red;">Error al eliminar el auto. Por favor, verifica los datos ingresados.</h1>';
+        require __DIR__ . '/../templates/tablaEliminar.phtml'; 
+        require __DIR__ . '/../templates/footer.phtml'; 
+    }
 
 }
 

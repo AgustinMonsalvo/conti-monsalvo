@@ -1,11 +1,11 @@
 <?php
-
+require_once __DIR__ . '/../config.php';
 class UsuarioModel {
     
     private $db;
 
     public function __construct() {
-       $this->db = new PDO('mysql:host=localhost;dbname=autoss;charset=utf8', 'root', '');
+       $this->db = new PDO('mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB . ';charset=utf8', MYSQL_USER, MYSQL_PASS);
     }
  
     public function getUserByEmail($email) {    

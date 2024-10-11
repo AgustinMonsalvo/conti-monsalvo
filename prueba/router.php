@@ -14,8 +14,8 @@ $action = 'listar';
 if (!empty( $_GET['action'])) {
     $action = $_GET['action'];
 }
-$atributo = $_GET['atributo'] ?? null;
-$valor = $_GET['valor'] ?? null;
+$atributo = $_POST['atributo'] ?? null;
+$valor = $_POST['valor'] ?? null;
 
 $params = explode('/', $action);
 

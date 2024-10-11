@@ -88,22 +88,28 @@ class AuthController {
     }
     public function agregarAutos(){
         if (!isset($_POST['color']) || empty($_POST['color'])) {
-          
+            $this->view->showErrorAgregados(); 
+            return;
         }
         if (!isset($_POST['modelo']) || empty($_POST['modelo'])) {
-            
+            $this->view->showErrorAgregados(); 
+            return;
         }
         if (!isset($_POST['kilometros']) || empty($_POST['kilometros'])) {
-            
+            $this->view->showErrorAgregados(); 
+            return;
         }
         if (!isset($_POST['asientos']) || empty($_POST['asientos'])) {
-            
+            $this->view->showErrorAgregados(); 
+            return;
         }
         if (!isset($_POST['informacion']) || empty($_POST['informacion'])) {
-            
+            $this->view->showErrorAgregados(); 
+            return;
         }
         if (!isset($_POST['marca']) || empty($_POST['marca'])) {
-            
+            $this->view->showErrorAgregados(); 
+            return;
         }
 
         
@@ -135,24 +141,33 @@ public function MostrarFormEdit()
 
         public function FormEdit() {
             if (!isset($_POST['id']) || empty($_POST['id'])) {
-            
+                $this->view->showErrorEditar(); 
+                return;
             }
                 if (!isset($_POST['color']) || empty($_POST['color'])) {
-                    
+                    $this->view->showErrorEditar(); 
+            return;
                 }
-                if (!isset($_POST['modelo']) || empty($_POST['modelo'])) {}
+                if (!isset($_POST['modelo']) || empty($_POST['modelo'])) {
+                    $this->view->showErrorEditar(); 
+            return;
+                }
                    
                 if (!isset($_POST['kilometros']) || empty($_POST['kilometros'])) {
-                    
+                    $this->view->showErrorEditar(); 
+            return;
                 }
                 if (!isset($_POST['asientos']) || empty($_POST['asientos'])) {
-                    
+                    $this->view->showErrorEditar(); 
+            return;
                 }
                 if (!isset($_POST['informacion']) || empty($_POST['informacion'])) {
-                    
+                    $this->view->showErrorEditar(); 
+            return;
                 }
                 if (!isset($_POST['marca']) || empty($_POST['marca'])) {
-                    
+                    $this->view->showErrorEditar(); 
+            return;
                 }
     
                 
@@ -183,7 +198,8 @@ public function MostrarFormEdit()
         {
             
             if (!isset($_POST['id']) || empty($_POST['id'])) {
-                
+                $this->view->showErrorEliminar();
+                return;
             }
         
             
