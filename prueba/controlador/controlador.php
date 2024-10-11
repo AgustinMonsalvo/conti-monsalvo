@@ -28,6 +28,8 @@ class TaskController {
     public function buscarCatalogos($atributo, $valor) {
         $catalogo = $this->model->getTasksCatalogo($atributo, $valor);
         $this->view->showCatalogo($catalogo); 
+      
+        
         
     }
 }

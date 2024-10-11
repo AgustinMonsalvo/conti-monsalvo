@@ -2,6 +2,7 @@
 <table class="task-table">
     <thead>
         <tr>
+        <th>Id</th>
             <th>Color</th>
             <th>Modelo</th>
             <th>Kilómetros</th>
@@ -14,6 +15,7 @@
         <?php if (!empty($autos)) : ?>
             <?php foreach ($autos as $auto) : ?>
                 <tr>
+                <td><?= $auto->id ?></td>
                     <td><?= $auto->color ?></td>
                     <td><?= $auto->Modelo ?></td>
                     <td><?= $auto->kilometros ?></td>

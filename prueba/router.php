@@ -22,6 +22,7 @@ $params = explode('/', $action);
 
 switch ($params[0]) {
     case 'listar':
+        
         $controller = new TaskController();
         $controller->showTasks();
         break;
@@ -33,17 +34,54 @@ switch ($params[0]) {
                 $controller = new TaskController();
                 $controller->Buscarcatalogos($atributo,$valor); 
                 break;
-                case 'Mostrarlogin':
+                case 'MostrarLogin':
+              
                     $controller = new AuthController();
                     $controller->showLogin();
                     break;
                     case 'login':
                         $controller = new AuthController();
                         $controller->login();
+                break;
+                case 'logout':
+                    $controller = new AuthController();
+                    $controller->logout();
+            break;
+            
+                case 'FormularioAgregar':
+                    fucionAutenticacion($respuesta);
+            fucionPermisos($respuesta);
+                    $controller = new AuthController();
+                    $controller->MostrarForm(); 
+            
+                   
+                break;
+                case 'agregar':
+                    $controller = new AuthController();
+                    $controller->agregarAutos();
+                    break;
+                    case 'formularioEditar':
                         fucionAutenticacion($respuesta);
                         fucionPermisos($respuesta);
-
-                break;
+                        $controller = new AuthController();
+                        $controller->MostrarFormEdit();
+                        break;
+                        case 'editar':
+                            $controller = new AuthController();
+                            $controller-> FormEdit();
+                            break;
+                            case 'formularioEliminar':
+                                fucionAutenticacion($respuesta);
+                                fucionPermisos($respuesta);
+                                $controller = new AuthController();
+                                $controller-> FormularioEliminarAutos();
+                                break;
+                                case 'eliminar':
+                                    $controller = new AuthController();
+                                    $controller-> eliminarAutos();
+                                    break;
+                   
+               
                          default: 
                              echo "404 Page Not Found"; 
                             break;
